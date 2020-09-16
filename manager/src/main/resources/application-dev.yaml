@@ -1,0 +1,11 @@
+logging:
+  level:
+    ROOT: debug
+  config: classpath:logback-dev.xml
+  file:
+    path: logs/datart-manager.log
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/datart

@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: datart-manager
+  profiles:
+    active: dev
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+  aop:
+    auto: true
+
+server:
+  port: 8080
+  servlet:
+    context-path: /datart-manager
+  error:
+    whitelabel:
+      enabled: false
+
+jasypt:
+  encryptor:
+    password: datart
