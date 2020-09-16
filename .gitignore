@@ -33,6 +33,6 @@ build/
 .vscode/
 
 ### logs ###
-/log/
-/logs/
-/LOG_FILE_IS_UNDEFINED
+log/
+logs/
+LOG_FILE_IS_UNDEFINED
