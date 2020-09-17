@@ -13,7 +13,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>manager</module>
+        <module>core</module>
         <module>client</module>
     </modules>
 

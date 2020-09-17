@@ -11,9 +11,9 @@
 
     <packaging>jar</packaging>
 
-    <artifactId>manager</artifactId>
-    <name>Manager</name>
-    <description>Datart manager</description>
+    <artifactId>core</artifactId>
+    <name>Core</name>
+    <description>Datart Core</description>
 
     <dependencies>
         <dependency>
