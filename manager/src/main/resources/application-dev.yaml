@@ -12,4 +12,4 @@ spring:
       authentication-database: admin
       database: datart
       username: datart
-      password:
+      password: ENC(klXaJuFCwoKRz0KhxKBZx6WEZ9fQ88hBUjOQsNB8/XBoB4Dfe3/Cn5Oomhc2qT3C)
