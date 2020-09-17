@@ -8,8 +8,6 @@ logging:
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost:27017
+      uri: mongodb://datart:${spring.data.mongodb.password}@localhost:27017/datart?authSource=${spring.data.mongodb.authentication-database}
       authentication-database: admin
-      database: datart
-      username: datart
-      password: ENC(klXaJuFCwoKRz0KhxKBZx6WEZ9fQ88hBUjOQsNB8/XBoB4Dfe3/Cn5Oomhc2qT3C)
+      password: ENC(JiglFkFwQXi44TuLeW+iNv6XqrW7qUEYHMRx9E7V4IfDmIHVojzrnrx22Bu97ULR)

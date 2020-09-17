@@ -1,7 +1,9 @@
 package org.gokasama.datart.manager;
 
+import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.mongodb.config.EnableMongoAuditing;
 import springfox.documentation.oas.annotations.EnableOpenApi;
 
 /**

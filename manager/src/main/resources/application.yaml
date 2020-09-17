@@ -20,4 +20,4 @@ server:
 
 jasypt:
   encryptor:
-    password: datart
+    password: ${JASYPT_ENCRYPTOR_PASSWORD:}
