@@ -36,9 +36,7 @@ public class AppConfController {
     @Auditing(operation = "list")
     public List<AppConf> list() {
 
-        List<AppConf> appConfList = appConfService.findAll();
-
-        return appConfList;
+        return appConfService.findAll();
     }
 
     @ApiOperation(value = "查看配置")
