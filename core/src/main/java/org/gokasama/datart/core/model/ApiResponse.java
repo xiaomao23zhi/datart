@@ -1,11 +1,11 @@
-package org.gokasama.datart.manager.model;
+package org.gokasama.datart.core.model;
 
 import io.swagger.annotations.ApiModel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.gokasama.datart.manager.enums.ApiExceptionCode;
+import org.gokasama.datart.core.enums.ApiExceptionCode;
 
 import java.io.Serializable;
 import java.time.Instant;

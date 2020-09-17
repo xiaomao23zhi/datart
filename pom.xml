@@ -8,7 +8,7 @@
     <artifactId>datart</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>Datart</name>
-    <description>Datart Parent Project</description>
+    <description>Datart is Data Art</description>
 
     <packaging>pom</packaging>
 

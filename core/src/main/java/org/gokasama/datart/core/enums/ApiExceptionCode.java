@@ -1,4 +1,4 @@
-package org.gokasama.datart.manager.enums;
+package org.gokasama.datart.core.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package org.gokasama.datart.manager;
+package org.gokasama.datart.core;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

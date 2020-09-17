@@ -1,4 +1,4 @@
-package org.gokasama.datart.manager.model;
+package org.gokasama.datart.core.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

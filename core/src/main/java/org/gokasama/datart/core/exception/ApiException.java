@@ -1,4 +1,4 @@
-package org.gokasama.datart.manager.exception;
+package org.gokasama.datart.core.exception;
 
 import lombok.Getter;
 import lombok.Setter;

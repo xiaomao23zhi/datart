@@ -1,12 +1,12 @@
-package org.gokasama.datart.manager.controller;
+package org.gokasama.datart.core.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
-import org.gokasama.datart.manager.annotation.Auditing;
-import org.gokasama.datart.manager.exception.NotFoundException;
-import org.gokasama.datart.manager.model.AppConf;
-import org.gokasama.datart.manager.service.AppConfService;
+import org.gokasama.datart.core.annotation.Auditing;
+import org.gokasama.datart.core.exception.NotFoundException;
+import org.gokasama.datart.core.model.AppConf;
+import org.gokasama.datart.core.service.AppConfService;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

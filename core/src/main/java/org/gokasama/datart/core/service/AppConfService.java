@@ -1,11 +1,11 @@
-package org.gokasama.datart.manager.service;
+package org.gokasama.datart.core.service;
 
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang3.math.NumberUtils;
-import org.gokasama.datart.manager.model.AppConf;
-import org.gokasama.datart.manager.repository.AppConfRepository;
+import org.gokasama.datart.core.model.AppConf;
+import org.gokasama.datart.core.repository.AppConfRepository;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

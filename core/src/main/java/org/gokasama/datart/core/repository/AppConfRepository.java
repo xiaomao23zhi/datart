@@ -1,6 +1,6 @@
-package org.gokasama.datart.manager.repository;
+package org.gokasama.datart.core.repository;
 
-import org.gokasama.datart.manager.model.AppConf;
+import org.gokasama.datart.core.model.AppConf;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**

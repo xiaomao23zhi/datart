@@ -13,9 +13,14 @@
 
     <artifactId>core</artifactId>
     <name>Core</name>
-    <description>Datart Core</description>
+    <description>Datart Core features</description>
 
     <dependencies>
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson-spring-boot-starter</artifactId>
+            <version>${redisson.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>

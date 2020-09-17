@@ -1,4 +1,4 @@
-package org.gokasama.datart.manager.aop;
+package org.gokasama.datart.core.aop;
 
 
 import com.alibaba.fastjson.JSON;
@@ -8,9 +8,9 @@ import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
-import org.gokasama.datart.manager.annotation.Auditing;
-import org.gokasama.datart.manager.model.Audit;
-import org.gokasama.datart.manager.service.AuditService;
+import org.gokasama.datart.core.annotation.Auditing;
+import org.gokasama.datart.core.model.Audit;
+import org.gokasama.datart.core.service.AuditService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
@@ -34,7 +34,7 @@ public class AuditAspect {
         this.auditService = auditService;
     }
 
-    @Pointcut("@annotation(org.gokasama.datart.manager.annotation.Auditing)")
+    @Pointcut("@annotation(org.gokasama.datart.core.annotation.Auditing)")
     public void auditPointcut() {
 
     }

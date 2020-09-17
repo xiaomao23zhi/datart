@@ -1,4 +1,4 @@
-package org.gokasama.datart.manager.annotation;
+package org.gokasama.datart.core.annotation;
 
 import java.lang.annotation.*;
 

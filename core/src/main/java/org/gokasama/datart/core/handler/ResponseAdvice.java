@@ -1,7 +1,7 @@
-package org.gokasama.datart.manager.handler;
+package org.gokasama.datart.core.handler;
 
-import org.gokasama.datart.manager.annotation.IgnorReponseAdvice;
-import org.gokasama.datart.manager.model.ApiResponse;
+import org.gokasama.datart.core.annotation.IgnorReponseAdvice;
+import org.gokasama.datart.core.model.ApiResponse;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;

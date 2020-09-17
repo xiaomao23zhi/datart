@@ -1,6 +1,6 @@
-package org.gokasama.datart.manager.exception;
+package org.gokasama.datart.core.exception;
 
-import org.gokasama.datart.manager.enums.ApiExceptionCode;
+import org.gokasama.datart.core.enums.ApiExceptionCode;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 

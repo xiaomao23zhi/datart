@@ -1,8 +1,8 @@
-package org.gokasama.datart.manager.service;
+package org.gokasama.datart.core.service;
 
 import lombok.extern.slf4j.Slf4j;
-import org.gokasama.datart.manager.model.Audit;
-import org.gokasama.datart.manager.repository.AuditRepository;
+import org.gokasama.datart.core.model.Audit;
+import org.gokasama.datart.core.repository.AuditRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
