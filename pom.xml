@@ -7,8 +7,8 @@
     <groupId>org.gokasama</groupId>
     <artifactId>datart</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>DataArt</name>
-    <description>DataArt Parent Project</description>
+    <name>Datart</name>
+    <description>Datart Parent Project</description>
 
     <packaging>pom</packaging>
 

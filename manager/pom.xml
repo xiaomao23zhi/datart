@@ -9,10 +9,11 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>manager</artifactId>
     <packaging>jar</packaging>
+
+    <artifactId>manager</artifactId>
     <name>Manager</name>
-    <description>DataArt manager</description>
+    <description>Datart manager</description>
 
     <dependencies>
         <dependency>
@@ -49,6 +50,11 @@
                     <warSourceExcludes>src/main/resources/**</warSourceExcludes>
                     <warName>${project.name}</warName>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.github.ulisesbocchio</groupId>
+                <artifactId>jasypt-maven-plugin</artifactId>
+                <version>${jasypt.version}</version>
             </plugin>
         </plugins>
     </build>
