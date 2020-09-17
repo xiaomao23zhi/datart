@@ -1,6 +1,11 @@
 logging:
   level:
     ROOT: debug
+    org:
+      springframework:
+        data:
+          mongodb:
+            core: info
   config: classpath:logback-dev.xml
   file:
     path: logs/datart-manager.log
@@ -11,3 +16,4 @@ spring:
       uri: mongodb://datart:${spring.data.mongodb.password}@localhost:27017/datart?authSource=${spring.data.mongodb.authentication-database}
       authentication-database: admin
       password: ENC(JiglFkFwQXi44TuLeW+iNv6XqrW7qUEYHMRx9E7V4IfDmIHVojzrnrx22Bu97ULR)
+      database: datart
