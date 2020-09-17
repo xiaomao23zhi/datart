@@ -18,3 +18,4 @@ public enum ApiExceptionCode {
     private int code;
     private String error;
 }
+    
