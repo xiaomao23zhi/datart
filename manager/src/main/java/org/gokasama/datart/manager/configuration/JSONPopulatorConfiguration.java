@@ -18,11 +18,11 @@ import java.util.List;
  */
 @Configuration
 @Slf4j
-public class JSONPopulatorConfig {
+public class JSONPopulatorConfiguration {
 
     final MongoTemplate mongoTemplate;
 
-    public JSONPopulatorConfig(MongoTemplate mongoTemplate) {
+    public JSONPopulatorConfiguration(MongoTemplate mongoTemplate) {
         this.mongoTemplate = mongoTemplate;
     }
 

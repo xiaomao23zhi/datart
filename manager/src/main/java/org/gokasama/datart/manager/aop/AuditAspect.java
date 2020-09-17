@@ -58,7 +58,7 @@ public class AuditAspect {
         audit.setArgs(JSON.toJSONString(args));
 
         //log to db
-        log.debug("[AuditAspect] - log to db: {}", audit);
+        log.debug("[Auditing] - log to db: {}", audit);
         auditService.log(audit);
     }
 }
