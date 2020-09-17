@@ -17,3 +17,11 @@ spring:
       authentication-database: admin
       password: ENC(JiglFkFwQXi44TuLeW+iNv6XqrW7qUEYHMRx9E7V4IfDmIHVojzrnrx22Bu97ULR)
       database: datart
+  task:
+    execution:
+      pool:
+        core-size: 8
+        max-size: 16
+        queue-capacity: 64
+        keep-alive: 120s
+      thread-name-prefix: manager-
