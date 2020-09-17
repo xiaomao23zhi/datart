@@ -27,4 +27,4 @@ spring:
         max-size: 16
         queue-capacity: 64
         keep-alive: 120s
-      thread-name-prefix: manager-
+      thread-name-prefix: core-
