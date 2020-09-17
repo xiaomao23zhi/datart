@@ -46,7 +46,7 @@ public class RedisLockAspect {
         RedisLock annotation = method.getAnnotation(RedisLock.class);
         String name;
         String key;
-        RLock rLock = null;
+        RLock rLock;
 
         try {
             if (annotation == null) {
@@ -82,7 +82,7 @@ public class RedisLockAspect {
             } catch (Exception exception) {
                 //Error
                 log.error("Error", exception);
-                throw new RedisLockException("<RedisLock> - error: " + exception.getMessage());
+                throw new RedisLockException("Error: " + exception.getMessage());
             } finally {
                 //Release
                 log.info("Release, name:{}, key:{}, waitTime:{}, leaseTime:{}",
