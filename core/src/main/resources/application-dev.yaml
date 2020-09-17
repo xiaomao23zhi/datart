@@ -8,7 +8,7 @@ logging:
             core: info
   config: classpath:logback-dev.xml
   file:
-    path: logs/datart-manager.log
+    path: logs/datart-core.log
 
 spring:
   data:

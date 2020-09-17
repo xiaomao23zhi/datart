@@ -1,6 +1,6 @@
 spring:
   application:
-    name: datart-manager
+    name: datart-core
   profiles:
     active: dev
   mvc:

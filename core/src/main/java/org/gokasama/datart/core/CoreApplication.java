@@ -11,9 +11,9 @@ import springfox.documentation.oas.annotations.EnableOpenApi;
 @SpringBootApplication
 @EnableOpenApi
 @EnableAsync
-public class ManagerApplication {
+public class CoreApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ManagerApplication.class, args);
+        SpringApplication.run(CoreApplication.class, args);
     }
 }
