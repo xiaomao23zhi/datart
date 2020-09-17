@@ -1,7 +1,7 @@
 [
   {
-    "key": "test.string",
+    "key": "app.test.string",
     "value": "5",
-    "_class": "org.gokasama.datart.manager.model.AppConf"
+    "_class": "org.gokasama.datart.core.model.AppConf"
   }
 ]
