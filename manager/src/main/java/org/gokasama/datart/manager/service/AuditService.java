@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.gokasama.datart.manager.model.Audit;
 import org.gokasama.datart.manager.repository.AuditRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 /**
@@ -25,6 +26,7 @@ public class AuditService {
      *
      * @param audit audit
      */
+    @Async
     public void log(Audit audit) {
 
         log.debug("Log audit: {}", audit);
