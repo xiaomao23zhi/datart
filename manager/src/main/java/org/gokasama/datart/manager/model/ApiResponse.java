@@ -53,12 +53,11 @@ public class ApiResponse<T> implements Serializable {
     }
 
     /**
-     *
-     * @param status status
-     * @param error error
+     * @param status  status
+     * @param error   error
      * @param message message
-     * @param data data
-     * @param <T> T
+     * @param data    data
+     * @param <T>     T
      * @return T
      */
     public static <T> ApiResponse<T> fail(int status, String error, String message, T data) {
