@@ -17,6 +17,7 @@ spring:
       authentication-database: admin
       password: ENC(JiglFkFwQXi44TuLeW+iNv6XqrW7qUEYHMRx9E7V4IfDmIHVojzrnrx22Bu97ULR)
       database: datart
+      auto-index-creation: true
   redis:
     host: localhost
     port: 6379
