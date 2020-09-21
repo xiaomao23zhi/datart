@@ -5,6 +5,8 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.IndexDirection;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
@@ -35,6 +37,7 @@ public class Audit implements Serializable {
 
     //Create date
     @ApiModelProperty(value = "创建时间")
+    @Indexed(name = "idx_createdDate", direction = IndexDirection.DESCENDING)
     @CreatedDate
     private Date createdDate;
 }

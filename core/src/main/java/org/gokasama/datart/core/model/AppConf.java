@@ -26,7 +26,7 @@ public class AppConf implements Serializable {
 
     //Configuration key
     @ApiModelProperty(value = "key")
-    @Indexed(unique = true)
+    @Indexed(name = "idx_key", unique = true)
     private String key;
 
     //Configuration value
