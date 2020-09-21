@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.config.AbstractMongoClientConfiguration;
 import org.springframework.data.mongodb.config.EnableMongoAuditing;
+import org.springframework.lang.NonNull;
 
 /**
  * @author ka wujia@chinamobile.com
@@ -26,11 +27,13 @@ public class MongoConfiguration extends AbstractMongoClientConfiguration {
     private boolean autoIndexCreation;
 
     @Override
+    @NonNull
     protected String getDatabaseName() {
         return database;
     }
 
     @Override
+    @NonNull
     public MongoClient mongoClient() {
 
         ConnectionString connectionString = new ConnectionString(uri);
