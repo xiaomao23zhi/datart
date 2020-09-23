@@ -15,6 +15,7 @@
     <modules>
         <module>core</module>
         <module>client</module>
+        <module>logcenter</module>
     </modules>
 
     <parent>
