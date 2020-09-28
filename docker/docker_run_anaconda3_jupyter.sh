@@ -5,4 +5,4 @@ docker run --name anaconda3 -i -t -p 8888:8888 continuumio/anaconda3 /bin/bash -
 
 #Install xgboost
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple xgboost
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --proxy="proxy.cmcc:8080" --default-timeout=360 xgboost
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --proxy="proxy.host:proxy.port" --default-timeout=360 xgboost
