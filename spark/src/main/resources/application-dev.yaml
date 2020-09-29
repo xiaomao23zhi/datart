@@ -1,0 +1,31 @@
+logging:
+  level:
+    ROOT: debug
+    org:
+      springframework:
+        data:
+          mongodb:
+            core: info
+  config: classpath:logback-dev.xml
+  file:
+    path: logs/datart-spark.log
+
+spring:
+#  data:
+#    mongodb:
+#      uri: mongodb://datart:${spring.data.mongodb.password}@localhost:27017/datart?authSource=${spring.data.mongodb.authentication-database}
+#      authentication-database: admin
+#      password: ENC(JiglFkFwQXi44TuLeW+iNv6XqrW7qUEYHMRx9E7V4IfDmIHVojzrnrx22Bu97ULR)
+#      database: datart
+#      auto-index-creation: true
+#  redis:
+#    host: localhost
+#    port: 6379
+  task:
+    execution:
+      pool:
+        core-size: 8
+        max-size: 16
+        queue-capacity: 64
+        keep-alive: 120s
+      thread-name-prefix: core-
