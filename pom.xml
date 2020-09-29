@@ -28,6 +28,8 @@
 
     <properties>
         <java.verison>1.8</java.verison>
+        <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.2.3.RELEASE</spring-cloud-alibaba.version>
         <springfox.version>3.0.0</springfox.version>
         <jasypt.version>3.0.3</jasypt.version>
         <redisson.version>3.13.4</redisson.version>
@@ -65,13 +67,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <!-- Spring Cloud -->
-        <!--        <dependency>-->
-        <!--            <groupId>org.springframework.cloud</groupId>-->
-        <!--            <artifactId>spring-cloud-starter-gateway</artifactId>-->
-        <!--            <version>2.2.5.RELEASE</version>-->
-        <!--        </dependency>-->
 
         <!-- tools -->
         <dependency>
