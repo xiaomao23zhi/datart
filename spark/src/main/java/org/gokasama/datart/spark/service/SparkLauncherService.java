@@ -30,12 +30,38 @@ public class SparkLauncherService {
                     .setMaster(SPARK_MASTER)
                     .setDeployMode("client")
                     .setAppResource(appResource)
-                    .startApplication();
+                    .startApplication(new SparkAppHandle.Listener(){
+
+                        @Override
+                        public void stateChanged(SparkAppHandle sparkAppHandle) {
+                            log.debug("!!!!!!!! {} - {}", sparkAppHandle.getAppId(), sparkAppHandle.getState());
+                        }
+
+                        @Override
+                        public void infoChanged(SparkAppHandle sparkAppHandle) {
+                            log.debug("!!!!!!!! {} - {}", sparkAppHandle.getAppId(), sparkAppHandle.getState());
+                        }
+                    });
         } catch (IOException e) {
             log.error("Cannot submit: {}", e.getMessage());
             return null;
         }
 
-        return sparkAppHandle.getAppId();
+        String applicationId = null;
+
+        while (applicationId == null) {
+            applicationId = sparkAppHandle.getAppId();
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        log.info("ApplicationId: {}", applicationId);
+
+//        sparkAppHandle.stop();
+
+        return applicationId;
     }
 }
