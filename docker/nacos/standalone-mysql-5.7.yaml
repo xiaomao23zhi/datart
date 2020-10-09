@@ -1,3 +1,4 @@
+# docker-compose -f standalone-mysql-5.7.yaml up
 version: "2"
 services:
   nacos:
@@ -16,7 +17,7 @@ services:
     restart: on-failure
   mysql:
     container_name: mysql
-    image: mysql:5.7
+    image: nacos/nacos-mysql:5.7
     env_file:
       - ./mysql.env
     volumes:
