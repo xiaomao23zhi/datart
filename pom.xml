@@ -17,6 +17,7 @@
         <module>client</module>
         <module>logcenter</module>
         <module>spark</module>
+        <module>gateway</module>
     </modules>
 
     <parent>
