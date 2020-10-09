@@ -6,13 +6,13 @@ import org.springframework.cloud.gateway.route.RouteDefinition;
 import org.springframework.cloud.gateway.route.RouteDefinitionWriter;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
 /**
  *
  */
-@Component
+@Service
 @Slf4j
 public class DynamicRouteService implements ApplicationEventPublisherAware {
 
@@ -24,40 +24,60 @@ public class DynamicRouteService implements ApplicationEventPublisherAware {
     }
 
     /**
-     * 添加路由实体类
      * @param definition
-     * @return
+     * @return String
      */
-    public boolean add(RouteDefinition definition){
-        routeDefinitionWriter.save((Mono<RouteDefinition>) Mono.just(definition).subscribe());
+    public String add(RouteDefinition definition) {
+
+        routeDefinitionWriter.save(Mono.just(definition)).subscribe();
         this.publisher.publishEvent(new RefreshRoutesEvent(this));
-        return true;
+
+        return "success";
     }
+
+
     /**
-     *
-     * @param definition 路由实体类
-     * @return
+     * @param definition
+     * @return String
      */
-    public boolean update(RouteDefinition definition){
+    public String update(RouteDefinition definition) {
         try {
-            routeDefinitionWriter.delete(Mono.just(definition.getId()));
-        }catch (Exception e){
-            log.error("update 失败。没有找到对应的路由ID :{}",definition.getId());
+
+            this.routeDefinitionWriter.delete(Mono.just(definition.getId()));
+
+        } catch (Exception e) {
+
+            return "update fail,not find route routeId: " + definition.getId();
         }
-        routeDefinitionWriter.save((Mono<RouteDefinition>) (Mono.just(definition)).subscribe());
-        this.publisher.publishEvent(new RefreshRoutesEvent(this));
-        return true;
+        try {
+            routeDefinitionWriter.save(Mono.just(definition)).subscribe();
+
+            this.publisher.publishEvent(new RefreshRoutesEvent(this));
+            return "success";
+
+        } catch (Exception e) {
+
+            return "update route fail";
+        }
+
+
     }
+
     /**
-     * serviceId
      * @param id
-     * @return
+     * @return String
      */
-    public boolean del(String id){
-        routeDefinitionWriter.delete(Mono.just(id));
-        this.publisher.publishEvent(new RefreshRoutesEvent(this));
-        return true;
+    public String delete(String id) {
+        try {
+            this.routeDefinitionWriter.delete(Mono.just(id));
+            return "delete success";
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "delete fail";
+        }
+
     }
+
     @Override
     public void setApplicationEventPublisher(ApplicationEventPublisher applicationEventPublisher) {
         this.publisher = applicationEventPublisher;

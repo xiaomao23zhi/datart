@@ -1,1 +1,21 @@
+server:
+  port: 38080
+#  servlet:
+#    context-path: /datart
 
+spring:
+  application:
+    name: datart-gateway
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
