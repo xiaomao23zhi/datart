@@ -13,7 +13,7 @@ spring:
 server:
   port: 8080
   servlet:
-    context-path: /datart-manager
+    context-path: /datart-core
   error:
     whitelabel:
       enabled: false
